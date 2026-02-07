@@ -2,7 +2,8 @@
 
 A production-grade multi-agent system built on Google's Agent Development Kit (ADK) that enables natural language-based resume editing through intelligent agent orchestration and tool-based operations. The system leverages local LLM inference via Ollama, eliminating API dependencies while maintaining enterprise-level functionality.
 
-![ResumeForge Demo Interface](TestingPICS/Screenshot_2026-02-08_03-07-32_AM.png)
+
+![ResumeForge Demo Interface](TestingPICS/OpeningImage.png)
 
 ---
 
@@ -94,8 +95,8 @@ Powered by Ollama with LiteLLM integration, supporting 100+ LLM providers while 
 ┌─────────────────────────────────────────────────────┐
 │                    Unibot                           │
 │              (Root Entry Agent)                     │
-│  - User greeting and request intake                │
-│  - High-level intent classification                │
+│  - User greeting and request intake                 │
+│  - High-level intent classification                 │
 └──────────────────┬──────────────────────────────────┘
                    │
                    ▼
@@ -103,8 +104,8 @@ Powered by Ollama with LiteLLM integration, supporting 100+ LLM providers while 
 │                ResumeAgent                          │
 │            (Coordinator Agent)                      │
 │  - Section identification                           │
-│  - Sub-agent selection and delegation              │
-│  - Tools: get_resume(), get_section()              │
+│  - Sub-agent selection and delegation               │
+│  - Tools: get_resume(), get_section()               │
 └──────────────────┬──────────────────────────────────┘
                    │
        ┌───────────┴───────────┬───────────┬─────────┐
@@ -127,6 +128,7 @@ User Input → Unibot → ResumeAgent → Specialist Agent → Tool Execution
                                                               ↓
                                                       Success Response
 ```
+
 
 ### Data Flow Architecture
 
@@ -184,6 +186,15 @@ User Input → Unibot → ResumeAgent → Specialist Agent → Tool Execution
 - **Python 3.11+**: Core runtime
 - **Virtual Environment**: Dependency isolation
 - **JSON**: Structured data storage
+
+
+
+
+##High-Level Diagram
+
+Here is a diagram showing how the different parts of the system work together
+
+![ResumeForge Demo Interface](TestingPICS/Architecture.png)
 
 ---
 
@@ -336,7 +347,6 @@ adk web
 # Navigate to: http://localhost:8000
 ```
 
-![Screenshot 1](TestingPICS/Screenshot_2026-02-08_03-07-58_AM.png)
 
 ### Example Interactions
 
@@ -380,6 +390,10 @@ System: [Routes to ProjectsAgent]
         [Validates schema]
 Response: Updated Cloud-Based Resume Parser project
 ```
+
+![ResumeForge Demo Interface](TestingPICS/Screenshot_2026-02-08_03-07-32_AM.png)
+
+![Screenshot 1](TestingPICS/Screenshot_2026-02-08_03-07-58_AM.png)
 
 ![Screenshot 2](TestingPICS/Screenshot_2026-02-08_03-12-45_AM.png)
 
@@ -627,141 +641,6 @@ class Resume(BaseModel):
 }
 ```
 
----
-
-## Performance Metrics
-
-### Latency Characteristics
-
-| Operation | First Request | Subsequent Requests |
-|-----------|---------------|---------------------|
-| Model Load | 10-20 seconds | N/A (cached) |
-| Simple Query | 2-4 seconds | 1-2 seconds |
-| Tool Execution | 3-5 seconds | 1-3 seconds |
-| Complex Multi-tool | 5-10 seconds | 3-6 seconds |
-
-### Resource Requirements
-
-| Resource | Minimum | Recommended |
-|----------|---------|-------------|
-| RAM | 8 GB | 16 GB |
-| Disk Space | 6 GB | 10 GB |
-| CPU | 4 cores | 8 cores |
-| GPU | None | Optional (faster inference) |
-
-### Model Specifications
-
-**Qwen2.5-7B**
-- Parameters: 7 billion
-- Quantization: Q4_K_M (4-bit)
-- Context Window: 32,768 tokens
-- Disk Size: 4.7 GB
-- Memory Usage: ~6-8 GB during inference
-
----
-
-## Troubleshooting
-
-### Model Does Not Support Tools
-
-**Error Message**:
-```
-litellm.BadRequestError: OpenAIException - registry.ollama.ai/library/model-name does not support tools
-```
-
-**Cause**: The selected model lacks function calling capability
-
-**Solution**:
-```bash
-# Switch to a tool-compatible model
-ollama pull qwen2.5:7b
-
-# Update all agent files to use new model
-# In agents/*.py, change:
-model="openai/qwen2.5:7b"
-```
-
----
-
-### Ollama Connection Refused
-
-**Error Message**:
-```
-ConnectionRefusedError: [Errno 61] Connection refused
-```
-
-**Cause**: Ollama server not running
-
-**Solution**:
-```bash
-# Start Ollama server
-ollama serve
-
-# Verify server is running
-curl http://localhost:11434/api/tags
-```
-
----
-
-### LiteLLM Not Found
-
-**Error Message**:
-```
-ValueError: Model openai/model-name not found. Provider-style models require litellm package.
-```
-
-**Cause**: LiteLLM extension not installed
-
-**Solution**:
-```bash
-pip install 'google-adk[extensions]'
-
-# Verify installation
-python3 -c "import litellm; print('LiteLLM installed')"
-```
-
----
-
-### Agent Import Errors
-
-**Error Message**:
-```
-ModuleNotFoundError: No module named 'agents'
-```
-
-**Cause**: Incorrect working directory or missing `__init__.py`
-
-**Solution**:
-```bash
-# Ensure you're in the correct directory
-cd /path/to/ResumeForge/resume_agent
-
-# Verify __init__.py exists
-ls agents/__init__.py
-
-# Clear Python cache
-find . -type d -name "__pycache__" -exec rm -rf {} +
-```
-
----
-
-### Schema Validation Errors
-
-**Error Message**:
-```
-pydantic_core._pydantic_core.ValidationError: 1 validation error for Resume
-```
-
-**Cause**: Data doesn't match Pydantic schema
-
-**Solution**:
-1. Check `resume.json` for structural issues
-2. Ensure all required fields are present
-3. Verify data types match schema definitions
-4. Restore from backup if corrupted
-
----
-
 ## Development
 
 ### Project Structure
@@ -884,3 +763,7 @@ MIT License - Open source and free to use, modify, and distribute.
 ---
 
 **ResumeForge** - Professional resume editing through intelligent agent orchestration
+
+---
+
+Done By : Adityagnss@2025
