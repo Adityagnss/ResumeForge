@@ -190,7 +190,7 @@ User Input → Unibot → ResumeAgent → Specialist Agent → Tool Execution
 
 
 
-##High-Level Diagram
+## High-Level Diagram
 
 Here is a diagram showing how the different parts of the system work together
 
