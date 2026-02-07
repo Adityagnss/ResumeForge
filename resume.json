@@ -1,0 +1,91 @@
+{
+  "summary": "Final-year B.Tech Computer Science (Cloud Computing) student with hands-on experience in building end-to-end Machine Learning and Cloud-based solutions. Proficient in Python, Java, and SQL, with expertise in TensorFlow, PyTorch, Scikit-learn, AWS, and GCP. Experienced in deploying scalable backend APIs using Google Cloud Functions and integrating NLP solutions with the Google NLP API. Passionate about applying AI, analytics, and cloud technologies to solve complex problems in an agile environment.",
+  "experiences": [
+    {
+      "id": "exp_1",
+      "company": "OSFIN.AI",
+      "role": "Data Analyst Intern",
+      "dates": "Jul 2025 \u2013 Present",
+      "bullets": [
+        "Currently contributing to data analytics projects in a fintech environment, focusing on automation and insight generation using tools such as DBware, Oracle SQL, Snowflake, Metabase, VM Templates, and advanced SQL techniques."
+      ]
+    },
+    {
+      "id": "exp_2",
+      "company": "AlQuantum Smart Solutions Pvt. Ltd.",
+      "role": "Machine Learning Intern",
+      "dates": "Jun 2024 \u2013 Jul 2024",
+      "bullets": [
+        "Completed a hands-on internship covering the design and implementation of machine learning and deep learning models.",
+        "Worked extensively with Python, NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, and Keras.",
+        "Applied CNN and transfer learning for real-world image classification datasets, improving model accuracy through optimization."
+      ]
+    }
+  ],
+  "skills": [
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Google NLP API",
+    "AWS",
+    "GCP",
+    "Google Cloud Functions",
+    "BigQuery",
+    "Firebase",
+    "Python",
+    "Java",
+    "SQL (MySQL)",
+    "Power BI",
+    "Looker Studio",
+    "Power Query",
+    "DAX",
+    "Data Structures & Algorithms",
+    "Object-Oriented Programming",
+    "Git",
+    "GitHub",
+    "Agile/Scrum",
+    "React"
+  ],
+  "projects": [
+    {
+      "id": "proj_1",
+      "name": "Cloud Grievance Redressal System",
+      "description": "Utilized Google NLP API to classify and process complaint text in real-time. Developed and deployed scalable backend services using Python and Google Cloud Functions. Implemented a hybrid GCP and AWS architecture for high availability and robust data processing. Automated civic issue detection from images using YOLOv11 and stored analytics-ready data in BigQuery for visualization in Looker Studio."
+    },
+    {
+      "id": "proj_2",
+      "name": "Voice-Based Parkinson's Detection using ConvLSTM-Transformer Hybrid",
+      "description": "Designed and trained a ConvLSTM-Transformer hybrid model to detect early Parkinson's disease from voice data. Captured both short- and long-term speech features using MFCCs, jitter, and shimmer, achieving 93.2% accuracy. Enhanced model explainability using SHAP and introduced a continuous risk scoring system."
+    },
+    {
+      "id": "proj_3",
+      "name": "DMA - Direct Market Access Website",
+      "description": "Built backend APIs for product management, orders, and authentication with secure JWT and Firebase integration. Integrated Braintree for real-time, secure payment processing and optimized MongoDB schemas for efficient storage and retrieval."
+    },
+    {
+      "id": "proj_4",
+      "name": "Enterprise Sales Analytics & Automation System",
+      "description": "Developed an interactive Power BI dashboard to monitor real-time sales performance and inventory levels. Applied Power Query for automated data ingestion and transformation from SQL Server and Excel. Created advanced DAX measures for KPIs such as YoY growth and conversion rates."
+    }
+  ],
+  "education": [
+    {
+      "id": "edu_1",
+      "degree": "B.Tech in Computer Science Engineering (Cloud Computing)",
+      "institution": "SRM Institute of Science and Technology, Kattankulathur, India",
+      "year": "2022 \u2013 2026, CGPA: 8.6/10.0"
+    },
+    {
+      "id": "edu_2",
+      "degree": "Class XII - BIEAP MPC",
+      "institution": "Sri Bhavishya Junior College, Vijayawada, India",
+      "year": "2020 \u2013 2022, Percentage: 88.1%"
+    },
+    {
+      "id": "edu_3",
+      "degree": "Class X - AP SSC Board",
+      "institution": "FIITJEE International School, Vijayawada, India",
+      "year": "2019 \u2013 2020, Percentage: 96.83%"
+    }
+  ]
+}
