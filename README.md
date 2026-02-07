@@ -336,7 +336,7 @@ adk web
 # Navigate to: http://localhost:8000
 ```
 
-![ResumeForge Web Interface](TestingPICS/Screenshot%202026-02-08%20at%203.07.58%20AM.png)
+![Screenshot 1](TestingPICS/Screenshot_2026-02-08_03-07-58_AM.png)
 
 ### Example Interactions
 
@@ -381,7 +381,7 @@ System: [Routes to ProjectsAgent]
 Response: Updated Cloud-Based Resume Parser project
 ```
 
-![Successful Edit Example](TestingPICS/Screenshot%202026-02-08%20at%203.12.45%20AM.png)
+![Screenshot 2](TestingPICS/Screenshot_2026-02-08_03-12-45_AM.png)
 
 ---
 
