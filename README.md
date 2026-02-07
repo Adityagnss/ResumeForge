@@ -2,7 +2,7 @@
 
 A production-grade multi-agent system built on Google's Agent Development Kit (ADK) that enables natural language-based resume editing through intelligent agent orchestration and tool-based operations. The system leverages local LLM inference via Ollama, eliminating API dependencies while maintaining enterprise-level functionality.
 
-![ResumeForge Demo Interface](TestingPICS/Screenshot%202026-02-08%20at%203.07.32%20AM.png)
+![ResumeForge Demo Interface](TestingPICS/Screenshot_2026-02-08_03-07-32_AM.png)
 
 ---
 
