@@ -691,6 +691,82 @@ python3 -c "from schema import Resume; import json; Resume(**json.load(open('res
 
 ---
 
+## Development
+
+### Project Structure
+
+```
+resume_agent/
+├── agents/                    # Agent implementations
+│   ├── __init__.py
+│   ├── unibot.py             # Root agent
+│   ├── resume_agent.py       # Coordinator
+│   ├── summary_agent.py      # Summary specialist
+│   ├── experience_agent.py   # Experience specialist
+│   ├── skills_agent.py       # Skills specialist
+│   ├── projects_agent.py     # Projects specialist
+│   └── education_agent.py    # Education specialist
+├── tools.py                   # Tool function implementations
+├── schema.py                  # Pydantic data models
+├── resume.json                # Resume data storage
+├── .env                       # Environment configuration
+├── requirements.txt           # Python dependencies
+├── README.md                  # This file
+└── TestingPICS/              # Screenshot assets
+    ├── Screenshot 2026-02-08 at 3.07.32 AM.png
+    ├── Screenshot 2026-02-08 at 3.07.58 AM.png
+    └── Screenshot 2026-02-08 at 3.12.45 AM.png
+```
+
+### Adding New Agents
+
+1. Create agent file in `agents/` directory
+2. Define agent with appropriate tools
+3. Register as sub-agent in coordinator
+4. Add tool functions in `tools.py`
+5. Update schema in `schema.py` if needed
+
+### Extending Tool Library
+
+```python
+# In tools.py
+def new_tool_function(param: str) -> str:
+    """
+    Tool description for LLM.
+    
+    Args:
+        param: Parameter description
+        
+    Returns:
+        Success message
+    """
+    data = _load_resume()
+    # Implement logic
+    return _save_resume(data)
+
+# In agent file
+agent = Agent(
+    name="agent_name",
+    tools=[existing_tools, new_tool_function],
+    # ... other config
+)
+```
+
+### Testing
+
+```bash
+# Test agent initialization
+python3 -c "from agents.unibot import unibot; print(unibot)"
+
+# Test tool execution
+python3 -c "from tools import get_skills; print(get_skills())"
+
+# Validate schema
+python3 -c "from schema import Resume; import json; Resume(**json.load(open('resume.json')))"
+```
+
+---
+
 ## Design Principles
 
 ### 1. Tool Enforcement
