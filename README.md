@@ -641,32 +641,6 @@ class Resume(BaseModel):
 }
 ```
 
-## Development
-
-### Project Structure
-
-```
-resume_agent/
-├── agents/                    # Agent implementations
-│   ├── __init__.py
-│   ├── unibot.py             # Root agent
-│   ├── resume_agent.py       # Coordinator
-│   ├── summary_agent.py      # Summary specialist
-│   ├── experience_agent.py   # Experience specialist
-│   ├── skills_agent.py       # Skills specialist
-│   ├── projects_agent.py     # Projects specialist
-│   └── education_agent.py    # Education specialist
-├── tools.py                   # Tool function implementations
-├── schema.py                  # Pydantic data models
-├── resume.json                # Resume data storage
-├── .env                       # Environment configuration
-├── requirements.txt           # Python dependencies
-├── README.md                  # This file
-└── TestingPICS/              # Screenshot assets
-    ├── Screenshot 2026-02-08 at 3.07.32 AM.png
-    ├── Screenshot 2026-02-08 at 3.07.58 AM.png
-    └── Screenshot 2026-02-08 at 3.12.45 AM.png
-```
 
 ### Adding New Agents
 
@@ -766,4 +740,4 @@ MIT License - Open source and free to use, modify, and distribute.
 
 ---
 
-Done By : Adityagnss@2025
+Done By : Adityagnss@2026
