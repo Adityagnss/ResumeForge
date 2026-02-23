@@ -1,6 +1,6 @@
 # ResumeForge
 
-Edit your resume by just talking to it. No forms, no manual editing — just tell the AI what you want changed and it handles the rest.
+A multi-agent AI system that lets you edit your resume using plain English. Just type what you want changed, and the agents handle the rest.
 
 > Powered by **Gemini 2.0 Flash** · Built with **Google ADK**
 
