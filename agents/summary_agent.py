@@ -39,7 +39,7 @@ You are responsible for reading and updating the professional summary section of
 
 summary_agent = Agent(
     name="summary_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Specialist agent for editing the professional summary section of the resume.",
     instruction=SUMMARY_AGENT_PROMPT,
     tools=[get_summary, update_summary],

@@ -45,7 +45,7 @@ You are responsible for adding, updating, and removing education entries from th
 
 education_agent = Agent(
     name="education_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Specialist agent for managing education entries in the resume.",
     instruction=EDUCATION_AGENT_PROMPT,
     tools=[get_education, get_education_by_id, update_education, add_education, remove_education],

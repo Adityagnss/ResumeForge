@@ -55,7 +55,7 @@ You are responsible for managing the work experience section, including jobs, ro
 
 experience_agent = Agent(
     name="experience_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Specialist agent for editing work experience entries including jobs, roles, and bullet points.",
     instruction=EXPERIENCE_AGENT_PROMPT,
     tools=[

@@ -47,7 +47,7 @@ You are the main entry point for the ResumeForge system. You greet users, unders
 
 unibot = Agent(
     name="unibot",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Root agent that greets users and routes resume editing requests to specialists.",
     instruction=UNIBOT_PROMPT,
     sub_agents=[resume_agent],

@@ -40,7 +40,7 @@ You are responsible for adding and removing skills from the resume.
 
 skills_agent = Agent(
     name="skills_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Specialist agent for adding and removing skills from the resume.",
     instruction=SKILLS_AGENT_PROMPT,
     tools=[get_skills, add_skill, remove_skill],

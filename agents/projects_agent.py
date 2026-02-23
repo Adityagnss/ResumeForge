@@ -47,7 +47,7 @@ You are responsible for adding, updating, and removing projects from the resume.
 
 projects_agent = Agent(
     name="projects_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Specialist agent for managing projects in the resume.",
     instruction=PROJECTS_AGENT_PROMPT,
     tools=[get_projects, get_project_by_id, add_project, update_project, remove_project],

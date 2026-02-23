@@ -57,7 +57,7 @@ You analyze user requests to determine which section of the resume they want to 
 
 resume_agent = Agent(
     name="resume_agent",
-    model="openai/qwen2.5:7b",
+    model="gemini-2.0-flash",
     description="Coordinator agent that identifies resume sections and routes to specialist agents for editing.",
     instruction=RESUME_AGENT_PROMPT,
     tools=[get_resume, get_section],
